@@ -7,6 +7,8 @@ import WeatherScreen from './Tabs/WeatherScreen';
 import SolunarScreen from './Tabs/SolunarScreen';
 import Community from './Tabs/Community';
 import HomeTab from './Tabs/HomeTab';
+import Settings from './Tabs/Settings';
+
 import { getName } from "../api/auth-api";
 
 
@@ -22,6 +24,7 @@ export default function Dashboard() {
         <Tab.Screen name="Weather" component={WeatherScreen} />
         <Tab.Screen name="Solunar" component={SolunarScreen} />
         <Tab.Screen name="Community" component={Community} />
+        <Tab.Screen name="Settings" component={Settings} />
       </Tab.Navigator>
     </NavigationContainer>
   );

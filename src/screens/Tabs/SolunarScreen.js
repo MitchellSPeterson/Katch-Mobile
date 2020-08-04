@@ -12,6 +12,7 @@ import DayComponent from '../../components/SolunarComponents/DayComponent';
 import TimesComponent from '../../components/SolunarComponents/TimesComponent';
 import TimesCard from '../../components/SolunarComponents/TimesCard';
 import MoonCard from '../../components/SolunarComponents/MoonCard';
+import WhySolunar from '../../components/SolunarComponents/WhySolunar';
 
 const today = moment();
 var day = today;
@@ -221,6 +222,7 @@ class SolunarScreen extends Component {
           
         <MoonCard mPhase={this.state.data.moonPhase} mRise={this.state.data.moonRise} mSet={this.state.data.moonSet} mHigh={this.state.data.moonTransit}/> 
         
+        <WhySolunar />
         </ScrollView>
           
       </SafeAreaView>

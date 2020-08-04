@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 
-class MoonCard extends Component {
+class WhySolunar extends Component {
     constructor(props){
         super(props);
         
@@ -12,11 +12,9 @@ class MoonCard extends Component {
     render(){
         return(
             <View style={styles.container}>
-                <Text>Moon Card</Text>
-                <Text>Phase: {this.props.mPhase}</Text>
-                <Text>Moon Rise: {this.props.mRise}</Text>
-                <Text>Moon Set: {this.props.mSet}</Text>
-                <Text>Moon Set: {this.props.mHigh}</Text>
+                <Image source={require('../../img/solunarTheory.jpg')}  style={styles.solunarImage}/>
+                <Text>What is Solunar Theory?</Text>
+                
             </View>
         )
     }
@@ -25,7 +23,7 @@ class MoonCard extends Component {
 const styles = {
     container: {
         width: '97%',
-        height: 150,
+        height: 250,
         backgroundColor: '#fff',
         borderRadius: 5,
         paddingTop: 5,
@@ -38,7 +36,13 @@ const styles = {
         shadowRadius: 2,  
         elevation: 5,
         alignItems: 'center'
+    },
+
+    solunarImage: {
+        width: '100%',
+        height: 170
+
     }
 }
 
-export default MoonCard;
+export default WhySolunar;
