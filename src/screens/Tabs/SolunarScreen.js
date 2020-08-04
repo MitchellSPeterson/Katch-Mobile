@@ -18,7 +18,7 @@ var day = today;
 const latitudeDelta = 0.025
 const longitudeDelta = 0.025
 
-class SolunarScreen extends Component {
+class SolunarScreen extends Component { 
   
   constructor() {
     super();
