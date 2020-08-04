@@ -13,6 +13,7 @@ class MoonCard extends Component {
         return(
             <View style={styles.container}>
                 <Text>Moon Card</Text>
+                <Text>Phase: {this.props.mPhase}</Text>
             </View>
         )
     }
