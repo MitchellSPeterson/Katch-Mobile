@@ -222,7 +222,7 @@ class SolunarScreen extends Component {
         
 
           
-        <MoonCard mPhase={this.state.data.moonPhase}/>
+        <MoonCard mPhase={this.state.data.moonPhase}/> 
         </ScrollView>
           
       </SafeAreaView>
