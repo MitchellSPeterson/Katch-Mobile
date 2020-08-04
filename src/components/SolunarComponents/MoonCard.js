@@ -14,6 +14,9 @@ class MoonCard extends Component {
             <View style={styles.container}>
                 <Text>Moon Card</Text>
                 <Text>Phase: {this.props.mPhase}</Text>
+                <Text>Moon Rise: {this.props.mRise}</Text>
+                <Text>Moon Set: {this.props.mSet}</Text>
+                <Text>Moon Set: {this.props.mHigh}</Text>
             </View>
         )
     }

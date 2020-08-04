@@ -45,10 +45,7 @@ class SolunarScreen extends Component {
         longitudeDelta: longitudeDelta
       },
 
-      moonRise: '',
-      moonZeinth: '',
-      moonSet: '',
-      moonPhase: '',
+      
 
 
     };
@@ -222,7 +219,8 @@ class SolunarScreen extends Component {
         
 
           
-        <MoonCard mPhase={this.state.data.moonPhase}/> 
+        <MoonCard mPhase={this.state.data.moonPhase} mRise={this.state.data.moonRise} mSet={this.state.data.moonSet} mHigh={this.state.data.moonTransit}/> 
+        
         </ScrollView>
           
       </SafeAreaView>
