@@ -1,18 +1,22 @@
 import React from 'react';
 import {SafeAreaView, Text, Button, ScrollView} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import { getName } from "../../api/auth-api";
+import { getName } from "../../../api/auth-api";
 
-import ActiveLoggingScreen from '../../components/HomeScreenComponents/StartActiveLogCard';
+
+import StartActiveLogCard from '../../../components/HomeScreenComponents/StartActiveLogCard';
+import ActiveLoggingScreen from './ActiveLoggingScreen';
 
 
 const HomeTab = () => {
     return(
         <LinearGradient colors={['#136cd1', '#2ff5a2']} style={styles.Gradient}>
             <SafeAreaView style={styles.container}>
-                
+                <Text style={styles.welcomeText}>Welcome {getName()}!</Text>
+                <ScrollView style={styles.scroll} contentContainerStyle={{alignItems: 'center'}}>
+                    <StartActiveLogCard />
 
-                
+                </ScrollView>
             </SafeAreaView>
         </LinearGradient>
             
@@ -45,4 +49,4 @@ const styles = {
     },
 }
 
-export default ActiveLoggingScreen;
+export default HomeTab;

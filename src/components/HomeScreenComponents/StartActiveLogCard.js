@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {View, Text, Image, Button} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 
-import ActiveLoggingScreen from './ActiveLoggingScreen'
+import ActiveLoggingScreen from '../../screens/Tabs/HomeScreens/ActiveLoggingScreen'
 
 
 class StartActiveLogCard extends Component {
@@ -26,8 +26,9 @@ class StartActiveLogCard extends Component {
 
 const styles = {
     hourCard: {
+        
         width: '97%',
-       // height: 250,
+        height: '100%',
         backgroundColor: '#fff',
         borderRadius: 5,
         marginTop: 20,

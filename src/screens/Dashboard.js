@@ -6,7 +6,7 @@ import { logoutUser } from "../api/auth-api";
 import WeatherScreen from './Tabs/WeatherScreen';
 import SolunarScreen from './Tabs/SolunarScreen';
 import Community from './Tabs/Community';
-import HomeTab from './Tabs/HomeTab';
+import HomeRouter from './Tabs/HomeRouter';
 import Settings from './Tabs/Settings';
 
 import { getName } from "../api/auth-api";
@@ -20,7 +20,7 @@ export default function Dashboard() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeTab} />
+        <Tab.Screen name="Home" component={HomeRouter} />
         <Tab.Screen name="Weather" component={WeatherScreen} />
         <Tab.Screen name="Solunar" component={SolunarScreen} />
         <Tab.Screen name="Community" component={Community} />
