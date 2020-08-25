@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component }  from 'react';
+import React, { Component }  from 'react';
 import {SafeAreaView, Text, ActivityIndicator, StyleSheet, Modal, View, TouchableOpacity, ScrollView} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import moment from 'moment';

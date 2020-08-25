@@ -5,23 +5,20 @@ import { NavigationContainer } from '@react-navigation/native';
 import ActiveLoggingScreen from '../../screens/Tabs/HomeScreens/ActiveLoggingScreen'
 
 
-class StartActiveLogCard extends Component {
-    constructor(props){
-        super(props);
-        
-    }
-    render(){
+const StartActiveLogCard = ({navigation}) => {
+    
+    
     return(
         <View style={styles.hourCard}>
             <Text style={styles.header}>Active Logging</Text>
-            <Button title="Start Active Log" />
+            <Button title="Start Active Log" onPress={() => navigation.navigate('Active')}/>
             
             
             
 
         </View>
     )
-    }
+    
 }
 
 const styles = {

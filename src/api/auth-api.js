@@ -100,3 +100,8 @@ export const getName = () => {
   }
   return name;
 }
+
+export const getTacklebox = () => {
+  var database = firebase.database('users');
+  return database;
+}

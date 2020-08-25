@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {SafeAreaView, View, ScrollView, Text, Image} from 'react-native';
+import {SafeAreaView, View, ScrollView, Text, Image, RefreshControl} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import * as Location from 'expo-location';
 import moment from 'moment';
@@ -23,6 +23,7 @@ class WeatherScreen extends Component {
       
         this.state = {
           isLoading: true,
+          refreshing: false,
           isCurrentLocation: false,
           currentWeatherData: [],
           solunatDate: day.format('YYYYMMDD'),
@@ -288,7 +289,7 @@ class WeatherScreen extends Component {
 
             });
 
-            //console.log(this.state.hourTwelveIcon);
+            console.log('Weather Fetched');
 
           }
         
@@ -309,6 +310,13 @@ class WeatherScreen extends Component {
                
          
         }
+
+        onRefresh = () => {
+            this.setState({refreshing: true});
+            this.getWeather(this.state.lat, this.state.lon).then(() => {
+            this.setState({refreshing: false});
+            });
+        }
     
         
     
@@ -322,7 +330,9 @@ class WeatherScreen extends Component {
                     <SafeAreaView style={styles.container}>
                         
                         <Text style={styles.locationText}>{this.state.city}</Text>
-                    <ScrollView style={styles.scroll} contentContainerStyle={{alignItems: 'center'}}>
+                    <ScrollView style={styles.scroll} contentContainerStyle={{alignItems: 'center'}} refreshControl={
+                        <RefreshControl refreshing={this.state.refreshing} onRefresh={this.onRefresh} />
+                     }>
 
                         <WeatherCard 
                             condition={this.state.weatherCondition} 
